@@ -1,5 +1,37 @@
 import React, {Component} from "react";
 
+class Membro extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            feed:[
+                {id: 1, username: 'Alcemir', curtidas: 10, comentarios: 2},
+                {id: 2, username: 'Maria', curtidas: 15, comentarios: 4},
+                {id: 3, username: 'Meirys', curtidas: 17, comentarios: 8},
+            ]
+        }
+    }
+    render(){
+        return(
+            <div>
+                {this.state.feed.map((item)=>{
+                    return(
+                        <div key={item.id}>
+                            <h3>{item.username}</h3>
+                            <a>{item.curtidas} Curtidas / {item.comentarios} Comentários</a><hr/>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+}
+export default Membro;
+
+
+/*import React, {Component} from "react";
+
 class App extends Component{
 
     constructor(props){
@@ -36,4 +68,4 @@ class App extends Component{
         )
     }
 }
-export default App;
+export default App;*/
