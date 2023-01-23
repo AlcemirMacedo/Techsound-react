@@ -1,33 +1,18 @@
 import React, {Component} from "react";
 
-class Membro extends Component{
+class Feed extends Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            feed:[
-                {id: 1, username: 'Alcemir', curtidas: 10, comentarios: 2},
-                {id: 2, username: 'Maria', curtidas: 15, comentarios: 4},
-                {id: 3, username: 'Meirys', curtidas: 17, comentarios: 8},
-            ]
-        }
-    }
+    
     render(){
         return(
-            <div>
-                {this.state.feed.map((item)=>{
-                    return(
-                        <div key={item.id}>
-                            <h3>{item.username}</h3>
-                            <a>{item.curtidas} Curtidas / {item.comentarios} Comentários</a><hr/>
-                        </div>
-                    )
-                })}
+            <div key={this.props.id}>
+                <h2>{this.props.nome}</h2>
+                <a>{this.props.like} Curtidas / {this.props.comments}</a><hr/>
             </div>
         )
     }
 }
-export default Membro;
+export default Feed;
 
 
 /*import React, {Component} from "react";
