@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Feed from "./componentes/Membro";
+import Login from "./componentes/forms/login";
 
 class App extends Component{
 
@@ -7,7 +8,7 @@ class App extends Component{
     super(props);
     this.state = {
         feed:[
-            {id: 1, username: 'Alcemir', curtidas: 10, comentarios: 2},
+            {id: 1, username: 'Alcemir', curtidas: 1, comentarios: 1},
             {id: 2, username: 'Maria', curtidas: 15, comentarios: 4},
             {id: 3, username: 'Meirys', curtidas: 17, comentarios: 8},
         ]
@@ -23,6 +24,8 @@ class App extends Component{
             </div>
           )
         })}
+
+        <Login />
       </div>
     )
   }

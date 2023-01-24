@@ -7,7 +7,7 @@ class Feed extends Component{
         return(
             <div key={this.props.id}>
                 <h2>{this.props.nome}</h2>
-                <a>{this.props.like} Curtidas / {this.props.comments}</a><hr/>
+                <a>{this.props.like > 1 ? this.props.like + ' Curtidas' : this.props.like + ' Curtida'} / {this.props.comments > 1 ? this.props.comments + ' Comentários' : this.props.comments + ' Comentário'}</a><hr/>
             </div>
         )
     }
